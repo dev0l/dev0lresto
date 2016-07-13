@@ -1,0 +1,67 @@
+// My Main
+
+// -- TEMP??? -- //
+body {
+  // padding-top: 50px;
+  // min-height: 2000px;
+  margin-top: 50px;
+  background-color: #111;
+}
+
+// .container {
+//   background-color: dimgrey;
+// }
+// -- TEMP??? -- //
+
+#square {
+  // position: absolute;
+  height: 250px;
+  width: 250px;
+  margin: 320px auto;
+  background-color: #0e0e0e;
+  box-shadow: inset 0 1px 2px black;
+  // top: 300px;
+}
+#square:hover {
+  box-shadow: 0 1px 2px black;
+}
+
+a {
+  color: grey;
+}
+
+li,ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#tempicons {
+  font-size: 50px;
+}
+
+// Default Main
+
+// alter bootstrap column #
+@grid-columns: 24;
+
+// ui bootstrap CSS fix
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer;
+}
+
+.carouselHeight {
+  // should probably use media queries here
+  height: 305px;
+}
+
+// also remove margin auto inline-style
+// note that we can style with directive tags!
+my-carousel img {
+  margin: auto;
+}
+
+Focus
+:focus {
+  outline: lightslategrey auto 5px;
+}

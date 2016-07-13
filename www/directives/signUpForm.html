@@ -1,0 +1,86 @@
+<h1>Sign Up</h1>
+
+<form ng-submit="submitProfile()">
+
+  <div class="row">
+
+    <div class="form-group col-xs-12 col-md-12">
+      <label for="profilesFirstName">First name</label>
+      <input type="text" class="form-control" ng-model="newProf.firstName" id="profilesFirstName" placeholder="First name" required>
+    </div>
+
+    <div class="form-group col-xs-12 col-md-12">
+      <label for="profilesLastName">Last name</label>
+      <input type="text" class="form-control" ng-model="newProf.lastName" id="profilesLastName" placeholder="Last name" required>
+      <!-- ng-options="r for r in rooms" -->
+    </div>
+
+  </div>
+  <!-- .row -->
+
+  <div class="row">
+
+    <div class="form-group col-xs-12 col-md-12">
+      <label for="profilesUsername">Username</label>
+      <input type="text" class="form-control" ng-model="newProf.userName" id="profilesuserName" placeholder="Username" required>
+    </div>
+
+    <div class="form-group col-xs-12 col-md-12">
+      <label for="profilesPassword">Password</label>
+      <input type="text" class="form-control" ng-model="newProf.password" id="profilesPassword" placeholder="Password" required>
+    </div>
+
+  </div>
+  <!-- .row -->
+
+  <div class="row">
+
+    <div class="form-group col-xs-12 col-md-12">
+      <label for="profilesEmail">E-mail</label>
+      <input type="email" class="form-control" ng-model="newProf.email" id="profilesEmail" placeholder="Email" required>
+    </div>
+
+    <div class="form-group col-xs-12 col-md-12">
+      <label for="profilesPhone">Phone</label>
+      <input type="tel" class="form-control" ng-model="newProf.phone" id="profilesPhone" placeholder="Phone">
+    </div>
+
+  </div>
+  <!-- .row -->
+
+  <div class="row">
+
+    <div class="form-group col-xs-12 col-md-4">
+      <label for="profilesDate">Date of birth</label>
+      <input type="date" class="form-control" ng-model="newProf.date" id="profilesDate">
+    </div>
+
+  </div>
+  <!-- .row -->
+
+  <div class="row">
+    <div class="form-group col-xs-12 col-md-4">
+      <label for="profilesPic">Profile picture</label>
+      <input type="file" file-model="myFile" />
+      <button ng-click="uploadFile()" value="Browse" ng-disabled="true">Upload</button>
+    </div>
+
+    <div class="form-group col-xs-12 col-md-4">
+      <label for="profilesAvatar">Avatar</label>
+      <input type="file" file-model="myFile" />
+      <button ng-click="uploadFile()" value="Browse" ng-disabled="true">Upload</button>
+      <button ng-disabled="true">Create avatar</button>
+    </div>
+  </div>
+  <!-- .row -->
+
+  <div class="row">
+
+    <div class="form-group col-xs-24 col-md-24">
+      <input type="submit" id="submit" class="btn btn-default" value="Submit">
+    </div>
+
+  </div>
+  <!-- .row -->
+
+</form>

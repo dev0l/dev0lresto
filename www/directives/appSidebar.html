@@ -1,0 +1,38 @@
+<div id="profileSidebar">
+
+  <div id="profile-heading" ng-repeat="profile in currentProfile">
+    <h4>{{profile.userName}}</h4>
+    <h6>{{profile.name}}</h6>
+  </div>
+
+  <div id="profile-body">
+
+    <!-- Sign In/Up -->
+    <!-- ALT!! [ http://mherman.org/blog/2015/07/02/handling-user-authentication-with-the-mean-stack/#.V3fkmLiLSUk ] -->
+    <div class="form-group">
+      <form ng-submit="submitForm()">
+        <div id="signIn">
+          <input type="text" class="form-control" ng-model="Users" id="userName" placeholder="Username" required>
+          <input type="password" class="form-control" ng-model="Users" id="userName" placeholder="Password" required>
+          <input type="button" value="Sign in">
+          <a href="/signUp">Sign up</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Sidebar Links -->
+    <div>
+      <ul class="nav">
+        <li class="nav-tabs" ng-repeat="link in links">
+          <a ng-href="{{link.url}}">{{link.title}}</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div id="profile-footer">
+    <span>{{currentTime | date : 'mediumTime'}} {{currentTime | date : 'yyyy-MM-dd'}}</span>
+  </div>
+
+</div>

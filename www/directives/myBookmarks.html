@@ -1,0 +1,51 @@
+<!-- jumpTo -->
+<nav>
+  <ul class="pager">
+    <li class="pager-prev disabled"><a href="#">Older</a></li>
+    <li class="pager-next"><a href="#">Newer</a></li>
+  </ul>
+</nav>
+
+<div>
+  <h4>Pager</h4>
+  <pre>You are currently on page {{currentPage}}</pre>
+  <uib-pager total-items="totalItems" ng-model="currentPage"></uib-pager>
+</div>
+
+<nav>
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item active">
+      <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item"><a class="page-link" href="#">5</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- thymbnails -->
+<!--<div class="container" ng-app="myApp" ng-controller="Main">-->
+  <!--<div ng-repeat="n in [] | range:32" ng-switch="$index%6">-->
+            <!--<div class="row" ng-switch-when="0">-->
+              <div class="col-sm-2"><a href="#" class="thumbnail"><img title="{{$index}}" src="//placehold.it/500" class="img-responsive"></a></div>
+              <div class="col-sm-2"><a href="#" class="thumbnail"><img title="{{$index}}" src="//placehold.it/500/CCC" class="img-responsive"></a></div>
+              <div class="col-sm-2"><a href="#" class="thumbnail"><img title="{{$index}}" src="//placehold.it/500/DDD" class="img-responsive"></a></div> 	
+              <div class="col-sm-2"><a href="#" class="thumbnail"><img title="{{$index}}" src="//placehold.it/500/BBB" class="img-responsive"></a></div>
+              <div class="col-sm-2"><a href="#" class="thumbnail"><img title="{{$index}}" src="//placehold.it/500/888" class="img-responsive"></a></div>
+              <div class="col-sm-2"><a href="#" class="thumbnail"><img title="{{$index}}" src="//placehold.it/500/AAA" class="img-responsive"></a></div>
+           <!--</div>-->
+      <!--</div>-->
+<!--</div>-->

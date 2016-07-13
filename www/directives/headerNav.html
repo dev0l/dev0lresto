@@ -1,0 +1,106 @@
+<nav id="head-nav" class="navbar navbar-inverse navbar-fixed-top">
+  <!-- class="navbar", .navbar-vertical-align-->
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!-- use ng-init + ng-click to make nav collapsible -->
+      <button type="button" class="navbar-toggle collapsed" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="navbar-brand" ng-href="/">dev0l<!-- {{user}} --></a>
+        <a id="menu-toggle" class="navbar-brand" href="#"><span class="glyphicon glyphicon-align-justify"></span></a>
+      </div>
+
+    </div>
+
+    <!-- ng-class assigns the collapsed "in" class whenever appropriate -->
+    <div class="collapse navbar-collapse" ng-class="navCollapsed ? '' : 'in'">
+
+      <!-- LINKS -->
+
+      <ul class="nav navbar-nav" ng-repeat="link in navLinks">
+        <li ng-class="link.url == currentUrl() ? 'active' : ''"><a ng-href="{{link.url}}">{{link.title}}</a></li>
+      </ul>
+
+      <!-- /.LINKS -->
+
+      <!-- NAVBAR-RIGHT -->
+      <div id="head-right" class="navbar-right">
+
+        <!-- SEARCH -->
+        <form id="head-search" class="navbar-nav navbar-form search">
+          <!-- override navbar-form padding and margin -->
+          <input type="text" class="form-control" placeholder="Search">
+          <i id="" ng-click="" class="fa fa-search" aria-hidden="true"> <!-- ng-blur="false" ng-focus="true" ng-class="{ myFocus: true, myBlur: false }" -->
+            <i class="caret"></i>
+          </i>
+        </form>
+
+        <!-- PROFILE -->
+        <ul class="nav navbar-nav">
+
+          <li role="e-mails" uib-dropdown>
+            <a id="email-dropdown" href="#" uib-dropdown-toggle>
+              <i class="badge badge-overlap-right">6</i>
+              <!-- {{showInBadge}} -->
+              <!-- {{email.length}} -->
+              <!-- aria-haspopup="true" aria-expanded="false"> -->
+              <i class="fa fa-envelope" aria-hidden="true">
+                <i class="caret"></i>
+              </i>
+            </a>
+            <ul class="dropdown-menu" ng-click="$event.stopPropagation();" uib-dropdown-menu role="menu" aria-labelledby="email-dropdown">
+              <li ng-repeat="email in emaiLinks">
+                <a id="email-nav" target="_blank" href="{{email.url}}">{{email.title}}
+                  <span class="badge">2</span>
+                  <input type="checkbox" class="pull-right">
+                  </a>
+               <a href="/myAccounts"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+              </li>
+              <!-- ng-model="showInBadge"
+              
+              <!-- make function to stay in window when new tab opens... -->
+              <!-- ng-click="dropboxitemselected(email)" -->
+              <li role="separator" class="divider"></li>
+              <li role="menu-item"><a href="#">Add email account</a></li>
+            </ul>
+          </li>
+
+          <li role="notifications" uib-dropdown>
+            <a id="notify-dropdown" href="#" uib-dropdown-toggle>
+              <i class="badge badge-overlap-right">21</i>
+              <!-- {{notify in notifys}} -->
+              <!-- aria-haspopup="true" aria-expanded="false"> -->
+              <i class="fa fa-bell" aria-hidden="true">
+                <i class="caret"></i>
+              </i>
+            </a>
+            <ul class="dropdown-menu" ng-click="$event.stopPropagation();" uib-dropdown-menu role="menu" aria-labelledby="notify-dropdown"> <!-- CREATE SCOPES YOU LAZY...!! -->
+              <li ng-repeat="notify in notifications"><a href="{{notify.url}}">Tasks<span class="badge">7</span><input type="checkbox" class="pull-right"></a></li>
+              <!--<li ng-repeat="notify in notifications"><a target="_blank" href="{{notify.url}}">Alerts<span class="badge">7</span><input type="checkbox" class="pull-right"></a></li>
+              <li ng-repeat="notify in notifications"><a target="_blank" href="{{notify.url}}">E-mails<span class="badge">7</span><input type="checkbox" class="pull-right"></a></li>
+              <li ng-repeat="notify in notifications"><a target="_blank" href="{{notify.url}}">All<span class="badge">7</span><input type="checkbox" class="pull-right"></a></li>-->
+              <li role="separator" class="divider"></li>
+              <li role="menu-item"><a href="#">Add notification</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <button id="profileBtn">
+          <img ng-repeat="profile in currentProfile" src="{{profile.pic}}" alt="Profile">
+        </button>
+        <!-- /.PROFILE -->
+
+      </div>
+      <!-- /.NAVBAR-RIGHT -->
+
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>

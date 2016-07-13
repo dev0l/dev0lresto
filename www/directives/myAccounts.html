@@ -1,0 +1,40 @@
+<div id="tempicons">
+<a href=""><i class="fa fa-facebook-square"></i></a>
+<a href=""><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+<a href=""><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+<a href=""><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+</div>
+
+<hr>
+
+<h1>E-mail</h1>
+<div class="jumbotron" ng-repeat="email in emails">
+  <h1 class="display-3">{{email.title}}</h1>
+  <a href="{{email.url}}" target="_blank" class="lead">{{email.title}}</a>
+  <hr class="m-y-2">
+  <p>Login</p>
+  <p class="lead">
+    <form action="">
+      <input type="text" placeholder="E-mail">
+      <input type="text" placeholder="Password">
+      <hr> <!-- temp -->
+      <a class="btn btn-primary btn-lg" href="#" role="button">Login</a>
+    </form>
+  </p>
+</div>
+
+<h1>Casino</h1>
+<div class="jumbotron" ng-repeat="casino in casinos">
+  <h1 class="display-3">{{casino.title}}</h1>
+  <a href="{{casino.url}}" target="_blank" class="lead">{{casino.title}}</a>
+  <hr class="m-y-2">
+  <p>Login</p>
+  <p class="lead">
+    <form action="">
+      <input type="text" placeholder="E-mail">
+      <input type="text" placeholder="Password">
+      <hr> <!-- temp -->
+      <a class="btn btn-primary btn-lg" href="#" role="button">Login</a>
+    </form>
+  </p>
+</div>

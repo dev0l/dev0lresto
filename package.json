@@ -1,0 +1,16 @@
+{
+  "name": "angularAppbase",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "debug": "*",
+    "express": "*",
+    "gulp": "*",
+    "gulp-less": "*",
+    "mongo-express": "*",
+    "mongoose": "*",
+    "serve-favicon": "*",
+    "underscore": "^1.8.3"
+  }
+}

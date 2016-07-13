@@ -1,0 +1,48 @@
+<div class="container-fluid">
+
+  <div class="row">
+
+    <a ng-repeat="profile in profile">
+      <!--<a ng-repeat="profile in profile track by $index" ng-href="/{{profile._id}}">-->
+      <div class="col-xs-24 col-md-12">
+        <!--<img class="bilder" ng-src="/{{profile.pic}}">-->
+        <h1>{{profile.userName}}</h1>
+        <h3>{{profile.email}}</h3>
+        <h3>{{profile.phone}}</h3>
+        <p>{{profile.firstName}} {{profile.lastName}}</p>
+      </div>
+    </a>
+
+  </div>
+  <!-- .row -->
+
+  <div class="row">
+    <div class="form-group col-xs-12 col-md-12">
+      <label for="profilesImages">Image type</label>
+      <div class="radio">
+        <label>
+          <input type="radio" ng-model="newProf.pic" ng-click="update()" name="optionsRadios" id="optionsRadios1" value="Image">
+          User image
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" ng-model="newProf.avatar" ng-click="update()" name="optionsRadios" id="optionsRadios2" value="Avatar">
+          Avatar
+        </label>
+      </div>
+
+      <div class="form-group col-xs-12 col-md-12">
+        <label for="profilesImages">Images</label>
+        <select class="form-control" ng-model="newProf.pic" id="profilesImages">
+        <option ng-repeat="imgUrl in imgUrls" value="{{imgUrl}}">
+          {{imgUrl}}
+        </option>
+      </select>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<!-- .container-fluid -->

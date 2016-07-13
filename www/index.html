@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <title>dev0lresto</title>
+  <meta charset="utf-8">
+  <!-- base href for Angular (HTML5 mode) -->
+  <base href="/">
+  <!-- meta tag for bootstrap (mobile devices) -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- JS libs -->
+  <script src="libs/jquery.min.js"></script>
+  <script src="libs/angular.min.js"></script>
+  <script src="libs/angular-touch.min.js"></script>
+  <script src="libs/angular-route.min.js"></script>
+  <script src="libs/angular-resource.min.js"></script>
+  <script src="libs/ui-bootstrap-tpls.min.js"></script>
+  <script src="https://use.fontawesome.com/c00abae8a7.js"></script>
+  <!-- my JS libs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+
+  <!-- our JS -->
+  <script src="/app.js"></script>
+
+  <!-- mongresto $resources -->
+  <script src="/api/ngresources/app"></script>
+
+  <!-- directives -->
+  <script src="/directives/headerNav.js"></script>
+  <script src="/directives/archiveBoxes.js"></script>
+  <script src="/directives/appSidebar.js"></script>
+
+  <!-- more directives -->
+  <script src="/directives/myCarousel.js"></script>
+  <script src="/directives/myModal.js"></script>
+
+  <!-- my directives -->
+  <script src="/directives/myContent.js"></script>
+  <script src="/directives/theArchives.js"></script>
+  <script src="/directives/temps.js"></script>
+  <script src="/directives/toDos.js"></script>
+  <script src="/directives/sideNav.js"></script>
+  <script src="/directives/signUpForm.js"></script>
+  <script src="/directives/myAccounts.js"></script>
+  <script src="/directives/myBookmarks.js"></script>
+  <script src="/directives/allProfiles.js"></script>
+
+
+  <!-- our modal controller is special -->
+  <script src="/modals/myModalInstance.js"></script>
+
+  <!-- all CSS -->
+  <link rel="stylesheet" href="css/all.css">
+  <!--<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">-->
+  <!-- my CSS -->
+
+</head>
+
+<body>
+  <!--
+        directives dont have to be inside a view!,
+        as long as they are inside our ng-app
+    -->
+    <header-nav></header-nav>
+    <side-nav></side-nav>
+    <app-sidebar></app-sidebar>
+    <div ng-view></div>
+  </div>
+
+</body>
+
+</html>
