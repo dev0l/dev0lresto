@@ -61,14 +61,14 @@
   <div class="row">
     <div class="form-group col-xs-12 col-md-4">
       <label for="profilesPic">Profile picture</label>
-      <input type="file" file-model="myFile" />
-      <button ng-click="uploadFile()" value="Browse" ng-disabled="true">Upload</button>
+      <input type="file" value="Browse" file-model="myFile" />   <!-- value="Browse" not working??? -->
+      <button ng-click="uploadFile()" ng-disabled="true">Upload</button>
     </div>
 
     <div class="form-group col-xs-12 col-md-4">
       <label for="profilesAvatar">Avatar</label>
-      <input type="file" file-model="myFile" />
-      <button ng-click="uploadFile()" value="Browse" ng-disabled="true">Upload</button>
+      <input type="file" value="Browse" file-model="myFile" />
+      <button ng-click="uploadFile()" ng-disabled="true">Upload</button>
       <button ng-disabled="true">Create avatar</button>
     </div>
   </div>

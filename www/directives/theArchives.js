@@ -11,7 +11,7 @@ app.directive('theArchives', [function () {
         $scope.newArch = null;
       }
 
-      $scope.addimages = function () {
+      $scope.addImg = function () {
 
       }
 

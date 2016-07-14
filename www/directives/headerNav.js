@@ -53,34 +53,34 @@ app.directive('headerNav', [function () {
       //   $(".search").toggleClass("open")
       // }
 
-  
-  
-  //     var callback = function () {...};
 
-  // $("input").keypress(function () {
-  //   if (event.which == 13) callback();
-  // });
 
-  // $('#login_submit').click(callback);
+      //     var callback = function () {...};
 
-  // Profile Button
-  /////
-  // * http://geniuscarrier.com/ng-toggle-in-angularjs/
-  /////
+      // $("input").keypress(function () {
+      //   if (event.which == 13) callback();
+      // });
 
-  // TEMPORARY, USE * ???
-  $("#profileBtn").on("click", function () {
-    var state = $(this).data('state');
-    state = !state;
-    if (state) {
-      $("#profileSidebar").addClass("show");
-    } else {
-      $("#profileSidebar").removeClass("show");
-    }
-    $(this).data('state', state);
-  });
+      // $('#login_submit').click(callback);
 
-}]
+      // Profile Button
+      /////
+      // * http://geniuscarrier.com/ng-toggle-in-angularjs/
+      /////
+
+      // TEMPORARY, USE * ???
+      $("#profileBtn").on("click", function () {
+        var state = $(this).data('state');
+        state = !state;
+        if (state) {
+          $("#profileSidebar").addClass("show");
+        } else {
+          $("#profileSidebar").removeClass("show");
+        }
+        $(this).data('state', state);
+      });
+
+    }]
   };
 }]);
 

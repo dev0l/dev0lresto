@@ -46,45 +46,13 @@ app.directive('toDos', [function () {
         });
       };
 
-      // $scope.removeDone = function (index) {
-      //   var todo = $scope.tasks.done;
-      //   Task.remove({ done: true }, function () {
-      //     $scope.tasks.splice(index, 1);
-      //   });
-      // };
-
       $scope.removeDone = function () {
-        Task.remove({ done: true })
+        Task.remove({ done: true }) // need if statement...
         setTimeout(function () {
           $scope.$apply(function () {
             $scope.tasks = Task.get()
           });
         }, 500);
-      };
-
-
-      // Total tasks
-      $scope.totalTasks = function () {
-        return $scope.tasks.length;
-      };
-
-      // Remaining tasks USING ANGULAR FUNCTION
-      $scope.remainingTasks = function () {
-        var count = 0;
-        angular.forEach($scope.tasks, function (task) {
-          count += task.done ? 0 : 1;
-        });
-        return count;
-      };
-
-      $scope.rems = [
-        {
-          type: 'danger'
-        }
-      ];
-
-      $scope.closeRem = function (index) {
-        $scope.rems.splice(index, 1);
       };
 
       // Archive tasks USING UNDERSCORE FUNCTION
@@ -111,6 +79,30 @@ app.directive('toDos', [function () {
       //     console.log(task.done)
       //   });
       // };
+
+      // Total tasks
+      $scope.totalTasks = function () {
+        return $scope.tasks.length;
+      };
+
+      // Remaining tasks USING ANGULAR FUNCTION
+      $scope.remainingTasks = function () {
+        var count = 0;
+        angular.forEach($scope.tasks, function (task) {
+          count += task.done ? 0 : 1;
+        });
+        return count;
+      };
+
+      $scope.rems = [
+        {
+          type: 'danger'
+        }
+      ];
+
+      $scope.closeRem = function (index) {
+        $scope.rems.splice(index, 1);
+      };
 
       $scope.oneAtATime = true;
 

@@ -15,8 +15,6 @@ app.directive('signUpForm', [function () {
   };
 }]);
 
-
-
 // FILE UPLOAD EXAMPLE!!
 
 // <script>

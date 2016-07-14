@@ -44,8 +44,12 @@
 #head-nav {
   min-width: 150px; //when XXSmal window...
   max-height: 51px;
-//   max-height: 50px; // TEMP
   margin-bottom: 0;
+}
+
+#head-nav .navbar-nav > .active > a:focus {
+    background-color: #111;
+    // box-shadow: 
 }
 
 .header-top {
@@ -53,11 +57,11 @@
     padding-top: 2px;
 }
 
-.header-top img {
-    border-radius: 50%;
-    max-width: 48px !important;
-    width: 100%;
-}
+// .header-top img {
+//     border-radius: 50%;
+//     max-width: 48px !important;
+//     width: 100%;
+// }
 
 .header-top li {
     display: inline-block;
@@ -126,9 +130,4 @@
     padding: 5px 5px;
     line-height: 0.5;
     background-color: #333333;
-}
-
-a:focus,a:hover,a{
-    outline:none;
-    text-decoration: none;
 }
