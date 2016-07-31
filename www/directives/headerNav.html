@@ -32,16 +32,23 @@
       <div id="head-right" class="navbar-right">
 
         <!-- SEARCH -->
-        <form id="head-search" class="navbar-nav navbar-form search">
-          <!-- override navbar-form padding and margin -->
-          <input type="text" class="form-control" placeholder="Search">
-          <i id="" ng-click="" class="fa fa-search" aria-hidden="true"> <!-- ng-blur="false" ng-focus="true" ng-class="{ myFocus: true, myBlur: false }" -->
-            <i class="caret"></i>
-          </i>
-        </form>
 
         <!-- PROFILE -->
-        <ul class="nav navbar-nav">
+        <ul id="icon-drop" class="nav navbar-nav">
+          <!-- id="no-active-back" -->
+
+          <!--<li role="search" uib-dropdown>-->
+          <!--<a id="search-dropdown" href="#" uib-dropdown-toggle>-->
+          <!--<form id="#" class="navbar-nav navbar-form search">-->
+          <form id="head-search" class="navbar-nav navbar-form search">
+            <!-- override navbar-form padding and margin -->
+            <input type="text" class="form-control" placeholder="Search">
+            <i id="" ng-click="" class="fa fa-search" aria-hidden="true"> <!-- ng-blur="false" ng-focus="true" ng-class="{ myFocus: true, myBlur: false }" -->
+              <i class="caret"></i>
+            </i>
+          </form>
+          <!--</a>-->
+          <!--</li>-->
 
           <li role="e-mails" uib-dropdown>
             <a id="email-dropdown" href="#" uib-dropdown-toggle>
@@ -56,10 +63,10 @@
             <ul class="dropdown-menu" ng-click="$event.stopPropagation();" uib-dropdown-menu role="menu" aria-labelledby="email-dropdown">
               <li ng-repeat="email in emaiLinks">
                 <a id="email-nav" target="_blank" href="{{email.url}}">{{email.title}}
-                  <span class="badge">2</span>
-                  <input type="checkbox" class="pull-right">
+                  <span class="badge" ng-show="checked">2</span>
+                  <input type="checkbox" class="pull-right" ng-model="checked" aria-label="Toggle ngHide">
                   </a>
-               <a href="/myAccounts"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                <!--<a href="/myAccounts"><i class="fa fa-sign-in" aria-hidden="true"></i></a>-->
               </li>
               <!-- ng-model="showInBadge"
               
@@ -79,11 +86,13 @@
                 <i class="caret"></i>
               </i>
             </a>
-            <ul class="dropdown-menu" ng-click="$event.stopPropagation();" uib-dropdown-menu role="menu" aria-labelledby="notify-dropdown"> <!-- CREATE SCOPES YOU LAZY...!! -->
-              <li ng-repeat="notify in notifications"><a href="{{notify.url}}">Tasks<span class="badge">7</span><input type="checkbox" class="pull-right"></a></li>
-              <!--<li ng-repeat="notify in notifications"><a target="_blank" href="{{notify.url}}">Alerts<span class="badge">7</span><input type="checkbox" class="pull-right"></a></li>
-              <li ng-repeat="notify in notifications"><a target="_blank" href="{{notify.url}}">E-mails<span class="badge">7</span><input type="checkbox" class="pull-right"></a></li>
-              <li ng-repeat="notify in notifications"><a target="_blank" href="{{notify.url}}">All<span class="badge">7</span><input type="checkbox" class="pull-right"></a></li>-->
+            <ul class="dropdown-menu" ng-click="$event.stopPropagation();" uib-dropdown-menu role="menu" aria-labelledby="notify-dropdown">
+              <li ng-repeat="notify in notifications">
+                <a id="ntify-nav" target="_blank" href="{{notify.url}}">{{notify.title}}
+                  <span class="badge" ng-show="checked">7</span>
+                  <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide" class="pull-right">
+                  </a>
+              </li>
               <li role="separator" class="divider"></li>
               <li role="menu-item"><a href="#">Add notification</a></li>
             </ul>

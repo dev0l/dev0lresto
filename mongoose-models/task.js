@@ -4,7 +4,7 @@ module.exports = function (mongoose) {
   var TaskSchema = mongoose.Schema({
     main: { type: String, required: true },
     sub: { type: String, required: false },
-    description: { type: String, required: true },
+    description: { type: String, required: false },
     pic: { type: String, required: false },
     done: false
     // a relation

@@ -46,7 +46,32 @@ app.directive('headerNav', [function () {
           title: "Tasks",
           url: "/toDo"
         },
+        {
+          title: "Emails",
+          url: "/myAccounts"
+        },
+        // category: "Social media"[
+        //   {
+        //     title: "Facebook",
+        //     url: "https://www.facebook.com/"
+        //   },
+        //   {
+        //     title: "Emails",
+        //     url: "https://twitter.com/?lang=sv"
+        //   }
+        // ],
+        //   },
+        {
+          title: "Facebook",
+          url: "https://www.facebook.com/"
+        },
+        {
+          title: "Twitter",
+          url: "https://twitter.com/?lang=sv"
+        },
       ];
+
+
 
       // Search
       // $scope.searchExpand = function () {

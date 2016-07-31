@@ -43,12 +43,12 @@
 
 #head-nav {
   min-width: 150px; //when XXSmal window...
-  max-height: 51px;
+  max-height: 50px;
   margin-bottom: 0;
-//   border-bottom: none;
+  border-bottom: none;
 }
 
-#head-nav .navbar-nav > .active > a:focus {
+#head-nav .navbar-nav > .active > a, a:focus {
     background-color: #111;
     // box-shadow: 
 }
@@ -98,6 +98,7 @@
     font-size: 18px;
     position: relative;
     top: 2px;
+    margin-right: 7px;
 }
 
 .search .fa-search:hover {
@@ -110,6 +111,39 @@
     padding-left: 0px;
     // margin-right: 4px;
 }
+
+#head-right .open a, a:hover, a:focus {
+    background-color: transparent;
+}
+
+#icon-drop .dropdown-menu {
+    background-color: #222;
+    border: none;
+    box-shadow: none;                           // ????????????????????????????????????????????????????
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 4px 12px 0;
+            // margin-top: 1px \9;
+            line-height: normal;
+}
+        a {
+            margin-left: 6px;
+            color: #9d9d9d;
+            font-weight: normal;
+            font-size: 14px;
+        }
+        a:hover {
+            color: white;
+        }
+}
+
+// #icon-drop .dropdown-menu > li > a {
+//     color: grey;
+// }
+
+// #icon-drop .dropdown-menu a {
+//     color: white;
+// }
 
 .badge-overlap-left {
     // background:red;
@@ -132,3 +166,7 @@
     line-height: 0.5;
     background-color: #333333;
 }
+
+// #no-active-back .active .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+//     background-color: transparent;
+// }

@@ -12,7 +12,7 @@ app.directive('appSidebar', [function () {
         {
           userName: "dev0l",
           name: "Marcus Mobark",
-          pic: "../images/profile/avatar/skull.png"
+          pic: "http://www.freeiconspng.com/uploads/circle-icon-22.png"
         },
       ];
 

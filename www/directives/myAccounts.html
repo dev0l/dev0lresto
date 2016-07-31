@@ -1,17 +1,110 @@
 <div id="tempicons">
-  <a href=""><i class="fa fa-facebook-square"></i></a>
-  <a href=""><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
-  <a href=""><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
-  <a href=""><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+  <a href=""><i class="fa fa-google"></i></a>
+  <a href=""><i class="fa fa-windows"></i></a>
+  <a href=""><i class="fa fa-facebook"></i></a>
+  <a href=""><i class="fa fa-reddit-alien"></i></a>
+  <a href=""><i class="fa fa-drupal"></i></a>
+  <!--<a href=""><i class="fa fa-facebook-square"></i></a>-->
+  <!--<a href=""><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>-->
 </div>
 
 <hr>
 
+<h1>Social</h1>
+<div class="jumbotron" ng-repeat="social in social">
+  <a href="{{social.url}}" target="_blank" class="lead"><img src="{{social.title}}" class="display-3" alt=""></a>
+  </br> <!-- TEMP! -->
+  <img src="{{social.img}}" alt="social image">
+  <hr class="m-y-2">
+  <p>Login</p>
+  <p class="lead">
+    <form action="">
+      <input type="text" placeholder="E-mail">
+      <input type="text" placeholder="Password">
+      <hr>
+      <!-- temp -->
+      <a class="btn btn-primary btn-lg" href="#" role="button">Login</a>
+    </form>
+  </p>
+</div>
+
 <h1>E-mail</h1>
 <div class="jumbotron" ng-repeat="email in emails">
-  <h1 class="display-3">{{email.title}}</h1>
-  <a href="{{email.url}}" target="_blank" class="lead">{{email.title}}</a>
+  <a href="{{email.url}}" target="_blank" class="lead"><img src="{{email.title}}" class="display-3" alt=""></a>
+  </br> <!-- TEMP! -->
   <img src="{{email.img}}" alt="e-mail image">
+  <hr class="m-y-2">
+  <p>Login</p>
+  <p class="lead">
+    <form action="">
+      <input type="text" placeholder="E-mail">
+      <input type="text" placeholder="Password">
+      <hr>
+      <!-- temp -->
+      <a class="btn btn-primary btn-lg" href="#" role="button">Login</a>
+    </form>
+  </p>
+</div>
+
+<h1>Collaboration</h1>
+<div class="jumbotron" ng-repeat="collaboration in collaboration">
+  <h1 class="display-3">{{collaboration.title}}</h1>
+  <a href="{{collaboration.url}}" target="_blank" class="lead">{{collaboration.title}}</a>
+  <img src="{{collaboration.img}}" alt="collaboration image">
+  <hr class="m-y-2">
+  <p>Login</p>
+  <p class="lead">
+    <form action="">
+      <input type="text" placeholder="E-mail">
+      <input type="text" placeholder="Password">
+      <hr>
+      <!-- temp -->
+      <a class="btn btn-primary btn-lg" href="#" role="button">Login</a>
+    </form>
+  </p>
+</div>
+
+<h1>Education</h1>
+<div class="jumbotron" ng-repeat="education in education">
+  <h1 class="display-3">{{education.title}}</h1>
+  <a href="{{education.url}}" target="_blank" class="lead">{{education.title}}</a>
+  <img src="{{education.img}}" alt="education image">
+  <hr class="m-y-2">
+  <p>Login</p>
+  <p class="lead">
+    <form action="">
+      <input type="text" placeholder="E-mail">
+      <input type="text" placeholder="Password">
+      <hr>
+      <!-- temp -->
+      <a class="btn btn-primary btn-lg" href="#" role="button">Login</a>
+    </form>
+  </p>
+</div>
+
+<h1>Blogs</h1>
+<div class="jumbotron" ng-repeat="blog in blogs">
+  <h1 class="display-3">{{blog.title}}</h1>
+  <a href="{{blog.url}}" target="_blank" class="lead">{{blog.title}}</a>
+  <img src="{{blog.img}}" alt="Blog image">
+  <hr class="m-y-2">
+  <p>Login</p>
+  <p class="lead">
+    <form action="">
+      <input type="text" placeholder="E-mail">
+      <input type="text" placeholder="Password">
+      <hr>
+      <!-- temp -->
+      <a class="btn btn-primary btn-lg" href="#" role="button">Login</a>
+    </form>
+  </p>
+</div>
+
+<h1>Health</h1>
+<div class="jumbotron" ng-repeat="health in health">
+  <h1 class="display-3">{{health.title}}</h1>
+  <a href="{{health.url}}" target="_blank" class="lead">{{health.title}}</a>
+  <img src="{{health.img}}" alt="health image">
   <hr class="m-y-2">
   <p>Login</p>
   <p class="lead">
@@ -29,6 +122,7 @@
 <div class="jumbotron" ng-repeat="casino in casinos">
   <h1 class="display-3">{{casino.title}}</h1>
   <a href="{{casino.url}}" target="_blank" class="lead">{{casino.title}}</a>
+  <img src="{{casino.img}}" alt="casino image">
   <hr class="m-y-2">
   <p>Login</p>
   <p class="lead">
