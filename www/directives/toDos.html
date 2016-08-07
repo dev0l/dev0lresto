@@ -13,7 +13,7 @@
       <uib-accordion close-others="oneAtATime">
 
         <uib-accordion-group ng-repeat="task in tasks | filter: search">
-        <!--<uib-accordion-group ng-repeat="task in tasks track by $index" ng-href="/{{task._id}}">-->
+          <!--<uib-accordion-group ng-repeat="task in tasks track by $index" ng-href="/{{task._id}}">-->
           <uib-accordion-heading>
             <!--<button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">-->
             <input ng-click="$event.stopPropagation(); disabled = !disabled" type="checkbox" id="accCheck" ng-model="task.done" ng-change="update($index)">
@@ -35,21 +35,20 @@
 
   <!-- Add Task -->
   <div class="row">
-    <div class="col-xs-24">
+    <div class="col-xs-20">
       <!-- Split button -->
       <form ng-submit="submitTask()">
-      <div ng-click="$event.stopPropagation();" class="btn-group" uib-dropdown>
-        <!--Known issues To use tooltips or popovers on elements within a btn-group, set the tooltip/popover appendToBody option to true. This is due to Bootstrap CSS styling. See here for more information.-->
-        <button id="split-button" type="submit" class="btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
-        <button type="button" class="btn btn-default" tooltip-placement="left" uib-tooltip="Add task" uib-dropdown-toggle>
+        <div ng-click="$event.stopPropagation();" class="btn-group" uib-dropdown>
+          <!--Known issues To use tooltips or popovers on elements within a btn-group, set the tooltip/popover appendToBody option to true. This is due to Bootstrap CSS styling.-->
+          <button id="split-button" type="submit" class="btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
+          <button type="button" class="btn btn-default" tooltip-placement="left" uib-tooltip="Add task" uib-dropdown-toggle>
         <span class="caret"></span>
         <span class="sr-only">Split button!</span>
       </button>
-        <!-- /Split button -->
-        <!-- Dropdown -->
-        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
-          <li role="menuitem">
-            <!--<form ng-submit="submitTask()">-->
+          <!-- /Split button -->
+          <!-- Dropdown -->
+          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+            <li role="menuitem">
 
               <!--<label for="taskMain">Main Task</label>-->
               <input type="text" class="form-control" ng-model="newTsk.main" id="taskMain" placeholder="Main task" required>
@@ -58,35 +57,28 @@
               <!--<label for="taskDescription">Description</label>-->
               <input type="text" class="form-control" ng-model="newTsk.description" id="taskDescription" placeholder="Description">
               <!--<label for="taskPic"></label>-->
-              <input type="file" file-model="newTsk.pic" ng-disabled="false"/>
-              
+              <input type="file" file-model="newTsk.pic" ng-disabled="false" />
+
               <!--<button ng-click="uploadFile()">Upload</button>-->
 
               <!--<input type="submit" id="submit" class="btn btn-default" value="Add">-->
+            </li>
+          </ul>
+          <!-- /Dropdown -->
+        </div>
+        <!-- /Add Task -->
+      </form>
+    </div>
 
-              <!--<form ng-submit="addTask()">
-
-              <input type="text" ng-model="addTaskTitle" size="30" placeholder="add new task here">
-              <input type="text" ng-model="addSubTaskTitle" size="30" placeholder="add new subTask here">
-              <input type="text" ng-model="addDescriptionTitle" size="30" placeholder="add new description here">
-              <input class="btn" type="submit" value="+">-->
-
-
-            </form>
-          </li>
-          </li>
-        </ul>
-        <!-- /Dropdown -->
-      </div>
-      <!-- Clear and Archive buttons -->
-      <!--<div class="">-->
+    <!-- Clear and Archive buttons -->
+    <!-- TEMP STYLE!!! -->
+    <div class="col-xs-4" style="float:right; width:auto;">
       <button class="btn" ng-click="archiveTasks()" tooltip-placement="bottom" uib-tooltip="Archive completed tasks"><i class="fa fa-archive" aria-hidden="true"></i></button>
       <button class="btn" ng-click="removeDone()" tooltip-placement="bottom" uib-tooltip="Clear completed tasks"><i class="fa fa-trash" aria-hidden="true"></i></button>
-      <!--</div>-->
-      <!-- /Clear and Archive buttons -->
     </div>
+    <!-- /Clear and Archive buttons -->
+
   </div>
-  <!-- /Add Task -->
 
   <!-- Task archive -->
   <div class="row well" ng-repeat="tasks in taskArchive">

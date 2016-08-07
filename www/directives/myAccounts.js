@@ -22,7 +22,7 @@ app.directive('myAccounts', [function () {
           img: "https://auth.gfx.ms/16.000.26416.00/AppCentipede/AppCentipede_Microsoft.svg"
         },
         {
-          title: "https://www.seeklogo.net/wp-content/uploads/2015/07/new-facebook-logo-2015-400x400.png",
+          title: "http://www.phonegreetings.com/layer_template/images/small-facebook-logo.png",
           url: "https://www.facebook.com/",
           img: "#"
         },
