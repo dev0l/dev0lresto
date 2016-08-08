@@ -31,6 +31,9 @@ app.config(["$locationProvider", "$routeProvider", function ($locationProvider, 
     .when("/myBookmarks", {
       templateUrl: "/templates/bookmarks.html"
     })
+    .when("/myFavourites", {
+      templateUrl: "/templates/favourites.html"
+    })
     .otherwise({
       templateUrl: "/templates/404.html"
     });

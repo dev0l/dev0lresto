@@ -3,9 +3,14 @@
   <a href=""><i class="fa fa-windows"></i></a>
   <a href=""><i class="fa fa-facebook"></i></a>
   <a href=""><i class="fa fa-reddit-alien"></i></a>
-  <a href=""><i class="fa fa-drupal"></i></a>
+  <a href="#e-mail"><i class="fa fa-envelope-o"></i></a>
+  <!--<a href=""><i class="fa fa-drupal"></i></a>-->
   <!--<a href=""><i class="fa fa-facebook-square"></i></a>-->
   <!--<a href=""><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>-->
+</div>
+
+<div>
+<input type="text" placeholder="add account">
 </div>
 
 <hr>
@@ -29,7 +34,7 @@
 </div>
 
 <h1>E-mail</h1>
-<div class="jumbotron" ng-repeat="email in emails">
+<div class="jumbotron" id="e-mail" ng-repeat="email in emails">
   <a href="{{email.url}}" target="_blank" class="lead"><img src="{{email.title}}" class="display-3" alt=""></a>
   </br> <!-- TEMP! -->
   <img src="{{email.img}}" alt="e-mail image">
