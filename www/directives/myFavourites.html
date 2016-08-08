@@ -1,6 +1,50 @@
+<div class="row">
+  <div class="col-xs-20">
+    <!-- Split button -->
+    <form ng-submit="submitFav()">
+      <div ng-click="$event.stopPropagation();" class="btn-group" uib-dropdown>
+        <!--Known issues To use tooltips or popovers on elements within a btn-group, set the tooltip/popover appendToBody option to true. This is due to Bootstrap CSS styling.-->
+        <button id="split-button" type="submit" class="btn" uib-tooltip="Add Favourite" tooltip-placement="left"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        <button type="button" class="btn btn-default" uib-dropdown-toggle>
+        <span class="caret"></span>
+        <span class="sr-only">Split button!</span>
+      </button>
+        <!-- /Split button -->
+        <!-- Dropdown -->
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+          <li role="menuitem">
+
+            <!--<label for="taskMain">Main Task</label>-->
+            <input type="text" class="form-control" ng-model="newFav.series" id="serie" placeholder="Series URL">
+            <!--<label for="taskSub">Sub Task</label>-->
+            <input type="text" class="form-control" ng-model="newFav.website" id="website" placeholder="Website URL">
+            <!--<label for="taskDescription">Description</label>-->
+            <input type="text" class="form-control" ng-model="newFav.link" id="link" placeholder="Link URL">
+            <!--<label for="taskPic"></label>-->
+            <!--<input type="file" file-model="newTsk.pic" ng-disabled="false" />-->
+
+            <!--<button ng-click="uploadFile()">Upload</button>-->
+
+            <!--<input type="submit" id="submit" class="btn btn-default" value="Add">-->
+          </li>
+        </ul>
+        <!-- /Dropdown -->
+      </div>
+      <!-- /Add Task -->
+    </form>
+  </div>
+</div>
+
 <ul>
   <h1>Series</h1>
   <li ng-repeat="serie in series">
     <a href="{{serie.url}}" target="_blank">{{serie.title}}</a>
+  </li>
+</ul>
+
+<ul>
+  <h1>Websites</h1>
+  <li ng-repeat="website in websites">
+    <a href="{{website.url}}" target="_blank">{{website.title}}</a>
   </li>
 </ul>

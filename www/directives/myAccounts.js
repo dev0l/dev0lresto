@@ -100,6 +100,28 @@ app.directive('myAccounts', [function () {
           },
         ],
 
+        $scope.games = [
+          {
+            title: 'Battle.net',
+            url: "#",
+            img: "#"
+          },
+          {
+            title: 'Steam',
+            url: "#",
+            img: "#"
+          },
+          {
+            title: "Glyph",
+            url: "#",
+            img: "#"
+          },
+          {
+            title: 'Origin',
+            url: "#",
+            img: "#"
+          },
+        ],
 
         $scope.casinos = [
           {
