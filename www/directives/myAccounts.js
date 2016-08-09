@@ -123,6 +123,13 @@ app.directive('myAccounts', [function () {
           },
         ],
 
+                 {
+            title: 'Gameforge',
+            url: "#",
+            img: "#"
+          },
+        ],
+
         $scope.casinos = [
           {
             title: 'Casinostugan',

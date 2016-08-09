@@ -32,6 +32,11 @@ app.directive('myFavourites', [function () {
           img: "#"
         },
         {
+          title: 'Workaholics',
+          url: "http://watch-series.to/serie/vice_principals",
+          img: "#"
+        },
+        {
           title: 'Mr Robot',
           url: "#",
           img: "#"
@@ -58,6 +63,26 @@ app.directive('myFavourites', [function () {
         },
         {
           title: 'American Dad',
+          url: "#",
+          img: "#"
+        },
+        {
+          title: 'Brickleberry',
+          url: "#",
+          img: "#"
+        },
+        {
+          title: 'Futurama',
+          url: "#",
+          img: "#"
+        },
+        {
+          title: 'Rick & Morty',
+          url: "#",
+          img: "#"
+        },
+        {
+          title: 'Archer',
           url: "#",
           img: "#"
         },
