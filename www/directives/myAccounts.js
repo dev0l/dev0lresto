@@ -121,9 +121,7 @@ app.directive('myAccounts', [function () {
             url: "#",
             img: "#"
           },
-        ],
-
-                 {
+          {
             title: 'Gameforge',
             url: "#",
             img: "#"
